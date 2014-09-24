@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<title>DateTime Picker</title>
+	
+		<link rel="stylesheet" type="text/css" href="../src/DateTimePicker.css" />
+	
+		<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="../src/DateTimePicker-with-Seconds.js"></script>
+	
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" type="text/css" href="../src/DateTimePicker-ltie9.css" />
+			<script type="text/javascript" src="../src/DateTimePicker-ltie9.js"></script>
+		<![endif]-->
+		
+		<style type="text/css">
+		
+			p
+			{
+				margin-left: 20px;
+			}
+		
+			input
+			{
+				width: 200px;
+				padding: 10px;
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+		
+		</style>
+	
+	</head>
+
+	<body>
+	
+		<p>DateTime (With Seconds) : </p>
+		<input id="dts" type="text" data-field="datetime">
+	
+		<div id="dtBox"></div>
+
+        <button id="click">Tet</button>
+	
+		<script type="text/javascript">
+		
+			$(document).ready(function()
+			{
+				$("#dtBox").DateTimePicker(
+                        {
+                            dateTimeFormat: "dd-MM-yyyy hh:mm:ss"
+                        }
+                );
+
+                $("#click").click(function(){
+                    alert($("#dts").val());
+                })
+			});
+		
+		</script>
+	
+	</body>
+
+</html>

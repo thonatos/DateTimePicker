@@ -25,7 +25,8 @@
   },
   "scripts": {
     "dist-js": "cat src/DateTimePicker.js | tee dist/DateTimePicker.js | node_modules/.bin/uglifyjs -mc > dist/DateTimePicker.min.js",
+    "dist-js-dts": "cat src/DateTimePicker-with-Seconds.js | tee dist/DateTimePicker-with-Seconds.js | node_modules/.bin/uglifyjs -mc > dist/DateTimePicker-with-Seconds.min.js",
     "dist-css": "cat src/DateTimePicker.css | tee dist/DateTimePicker.css | node_modules/.bin/cleancss -o dist/DateTimePicker.min.css",
-    "dist": "npm run dist-js && npm run dist-css"
+    "dist": "npm run dist-js && npm run dist-js-dts && npm run dist-css"
   }
 }
